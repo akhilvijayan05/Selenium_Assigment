@@ -4,7 +4,7 @@
 		module="selenium-assignment$sbt_2.10"
 		revision="1.0"
 		status="integration"
-		publication="20170328023401"
+		publication="20170328183002"
 	/>
 	<configurations>
 		<conf name="default" visibility="public"/>

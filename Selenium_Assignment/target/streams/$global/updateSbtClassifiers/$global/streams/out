@@ -1774,9 +1774,9 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-interface;1.0!test-interface.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.13!apply-macro.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#template-resolver;0.1!template-resolver.jar
-[debug] :: resolution report :: resolve 2851ms :: artifacts dl 87ms
+[debug] :: resolution report :: resolve 1597ms :: artifacts dl 66ms
 [debug] 	report for selenium-assignment#selenium-assignment$sbt_2.10;1.0 default produced in /home/knoldus/Selenium_Assignment/target/resolution-cache/reports/selenium-assignment-selenium-assignment$sbt_2.10-default.xml
-[debug] 	resolve done (2851ms resolve - 87ms download)
+[debug] 	resolve done (1597ms resolve - 66ms download)
 [debug] Using inline dependencies specified in Scala.
 [debug] :: resolving dependencies :: selenium-assignment#selenium-assignment$sources_2.10;1.0
 [debug] 	confs: [default]
@@ -2470,6 +2470,6 @@
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-compiler;2.10.6!scala-compiler.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#interface;0.13.13!interface.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#logging;0.13.13!logging.jar(src)
-[debug] :: resolution report :: resolve 366ms :: artifacts dl 52ms
+[debug] :: resolution report :: resolve 209ms :: artifacts dl 55ms
 [debug] 	report for selenium-assignment#selenium-assignment$sources_2.10;1.0 default produced in /home/knoldus/Selenium_Assignment/target/resolution-cache/reports/selenium-assignment-selenium-assignment$sources_2.10-default.xml
-[debug] 	resolve done (366ms resolve - 52ms download)
+[debug] 	resolve done (209ms resolve - 55ms download)

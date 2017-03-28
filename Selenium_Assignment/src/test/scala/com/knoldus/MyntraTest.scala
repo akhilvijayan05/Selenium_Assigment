@@ -6,7 +6,7 @@ package com.knoldus
 
 import java.util.concurrent.TimeUnit
 
-import org.openqa.selenium.By
+import org.openqa.selenium.{By, WebElement}
 import org.openqa.selenium.interactions.Actions
 import org.openqa.selenium.support.ui.{ExpectedConditions, Select}
 import org.scalatest.FlatSpec
@@ -67,6 +67,8 @@ class MyntraTest extends FlatSpec with Myntra {
     driver.findElementByCssSelector("li.product-base a:nth-child(2)").click()
   }
 
+
+
   "user" should "be able to choose the desired size of the selected t-shirt and then add it to the cart" in {
 
     driver.findElementByCssSelector("button.size-buttons-size-button.size-buttons-size-button-default").click()
@@ -74,9 +76,35 @@ class MyntraTest extends FlatSpec with Myntra {
     driver.findElementByCssSelector("button.pdp-add-to-bag.pdp-button").click()
   }
 
+  "user" should "search for watches category" in {
+
+    webdriverwait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("input.desktop-searchBar")))
+
+    val search: WebElement =driver.findElementByCssSelector("input.desktop-searchBar")
+    search.sendKeys("watches")
+    driver.findElementByCssSelector("a.desktop-submit").click()
+  }
+
+  "user" should "select a watch" in {
+
+    webdriverwait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("li.product-base a:nth-child(2)")))
+
+    driver.findElementByCssSelector("li.product-base a:nth-child(2)").click()
+  }
+
+  "user" should "be able to add the watch to the cart" in {
+
+    driver.findElementByCssSelector("button.pdp-add-to-bag.pdp-button").click()
+
+  }
   "user" should "be able to checkout" in {
 
     driver.findElementByCssSelector("a.desktop-cart").click()
   }
+
+// "user" should "be able to checkout" in {
+//
+//    driver.findElementByCssSelector("a.desktop-cart").click()
+//  }
 
 }
