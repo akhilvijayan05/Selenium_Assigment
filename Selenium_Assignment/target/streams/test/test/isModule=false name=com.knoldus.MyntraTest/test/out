@@ -2,6 +2,8 @@
 [0m[[0minfo[0m] [0m[32mA user[0m[0m
 [0m[[0minfo[0m] [0m[32m- should visit on amazon.in[0m[0m
 [0m[[0minfo[0m] [0m[32muser[0m[0m
+[0m[[0minfo[0m] [0m[32m- should fail to login with invalid credentials[0m[0m
+[0m[[0minfo[0m] [0m[32muser[0m[0m
 [0m[[0minfo[0m] [0m[32m- should logged in[0m[0m
 [0m[[0minfo[0m] [0m[32muser[0m[0m
 [0m[[0minfo[0m] [0m[32m- should select a T-shirt category[0m[0m
@@ -16,4 +18,45 @@
 [0m[[0minfo[0m] [0m[32muser[0m[0m
 [0m[[0minfo[0m] [0m[32m- should be able to add the watch to the cart[0m[0m
 [0m[[0minfo[0m] [0m[32muser[0m[0m
-[0m[[0minfo[0m] [0m[32m- should be able to checkout[0m[0m
+[0m[[0minfo[0m] [0m[32m- should be able to verify the products added to cart[0m[0m
+[0m[[0minfo[0m] [0m[32muser[0m[0m
+[0m[[0minfo[0m] [0m[31m- should be able to checkout *** FAILED ***[0m[0m
+[0m[[0minfo[0m] [0m[31m  org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: div.suggestions div.bd button (tried for 20 second(s) with 500 MILLISECONDS interval)[0m[0m
+[0m[[0minfo[0m] [0m[31mBuild info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'[0m[0m
+[0m[[0minfo[0m] [0m[31mSystem info: host: 'knoldus-Vostro-3559', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.19.0-30-generic', java.version: '1.8.0_121'[0m[0m
+[0m[[0minfo[0m] [0m[31mDriver info: org.openqa.selenium.chrome.ChromeDriver[0m[0m
+[0m[[0minfo[0m] [0m[31mCapabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455506 (18f6627e265f442aeec9b6661a49fe819aeeea1f), userDataDir=/tmp/.org.chromium.Chromium.3wZXnt}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.110, platform=LINUX, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}][0m[0m
+[0m[[0minfo[0m] [0m[31mSession ID: d14e31478e5c773b7c0d7c2e85633586[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:265)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at com.knoldus.MyntraTest.$anonfun$new$11(MyntraTest.scala:122)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:12)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:20)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.scalatest.FlatSpecLike$$anon$1.apply(FlatSpecLike.scala:1682)[0m[0m
+[0m[[0minfo[0m] [0m[31m  ...[0m[0m
+[0m[[0minfo[0m] [0m[31m  Cause: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"div.suggestions div.bd button"}[0m[0m
+[0m[[0minfo[0m] [0m[31m  (Session info: chrome=57.0.2987.110)[0m[0m
+[0m[[0minfo[0m] [0m[31m  (Driver info: chromedriver=2.28.455506 (18f6627e265f442aeec9b6661a49fe819aeeea1f),platform=Linux 3.19.0-30-generic x86_64) (WARNING: The server did not provide any stacktrace information)[0m[0m
+[0m[[0minfo[0m] [0m[31mCommand duration or timeout: 20 milliseconds[0m[0m
+[0m[[0minfo[0m] [0m[31mFor documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html[0m[0m
+[0m[[0minfo[0m] [0m[31mBuild info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'[0m[0m
+[0m[[0minfo[0m] [0m[31mSystem info: host: 'knoldus-Vostro-3559', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '3.19.0-30-generic', java.version: '1.8.0_121'[0m[0m
+[0m[[0minfo[0m] [0m[31mDriver info: org.openqa.selenium.chrome.ChromeDriver[0m[0m
+[0m[[0minfo[0m] [0m[31mCapabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455506 (18f6627e265f442aeec9b6661a49fe819aeeea1f), userDataDir=/tmp/.org.chromium.Chromium.3wZXnt}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.110, platform=LINUX, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}][0m[0m
+[0m[[0minfo[0m] [0m[31mSession ID: d14e31478e5c773b7c0d7c2e85633586[0m[0m
+[0m[[0minfo[0m] [0m[31m*** Element info: {Using=css selector, value=div.suggestions div.bd button}[0m[0m
+[0m[[0minfo[0m] [0m[31m  at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at java.lang.reflect.Constructor.newInstance(Constructor.java:423)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:465)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.openqa.selenium.By$ByCssSelector.findElement(By.java:430)[0m[0m
+[0m[[0minfo[0m] [0m[31m  ...[0m[0m

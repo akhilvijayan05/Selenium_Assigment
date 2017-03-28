@@ -16,7 +16,7 @@ trait Myntra {
   System.setProperty("webdriver.chrome.driver", "/home/knoldus/chrome_driver/chromedriver")
   val capabilities = DesiredCapabilities.chrome()
   val driver = new ChromeDriver(capabilities)
-  val webdriverwait = new WebDriverWait(driver, 10)
+  val webdriverwait = new WebDriverWait(driver, 20)
 
 
 

@@ -4,7 +4,7 @@
 		module="selenium-assignment$sources_2.12"
 		revision="1.0"
 		status="integration"
-		publication="20170328182956"
+		publication="20170329004313"
 	/>
 	<configurations>
 		<conf name="compile" visibility="public" description=""/>

@@ -19,18 +19,28 @@ class MyntraTest extends FlatSpec with Myntra {
     driver.get(BASE_URL)
     val title = driver.getTitle()
     val page_source = driver.getPageSource().length
-    if (driver.getCurrentUrl == BASE_URL) {
-      println("WELCOME TO AMAZON.in with title : " + title)
-      println("the lenght of the pagesource is: " + page_source)
-    } else {
-      println("something went wrong")
-    }
   }
 
-  "user" should "logged in " in {
+  "user" should "fail to login with invalid credentials" in {
 
     driver.manage().window().maximize()
     driver.get(BASE_URL)
+
+    val dropDown = driver.findElementByCssSelector("div.desktop-user")
+    val mouseHover = new Actions(driver)
+    mouseHover.moveToElement(dropDown)
+    mouseHover.build().perform()
+
+    driver.findElementByCssSelector("div.desktop-getUserInLinks.desktop-getInLinks a:nth-child(2)").click()
+
+    driver.findElementByCssSelector("input.login-user-input-email.login-user-input").sendKeys("a123@gmail.com")
+
+    driver.findElementByCssSelector("input.login-user-input-password.login-user-input").sendKeys("123456")
+
+    driver.findElementByCssSelector("button.login-login-button").click()
+  }
+
+  "user" should "logged in " in {
 
     val dropDown = driver.findElementByCssSelector("div.desktop-user")
     val mouseHover = new Actions(driver)
@@ -52,13 +62,6 @@ class MyntraTest extends FlatSpec with Myntra {
 
     driver.findElementByCssSelector("li.navi-base  a.navi-link.navi-pad ").click()
   }
-
-  //  "user" should "select a T-shirt" in{
-  //
-  //    webdriverwait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("ul.results-base li.product-base a:nth-child(2)")))
-  //
-  //    driver.findElementByCssSelector("li.product-base a:nth-child(2)").click()
-  //  }
 
   "user" should "select a T-shirt" in {
 
@@ -97,14 +100,38 @@ class MyntraTest extends FlatSpec with Myntra {
     driver.findElementByCssSelector("button.pdp-add-to-bag.pdp-button").click()
 
   }
-  "user" should "be able to checkout" in {
+  "user" should "be able to verify the products added to cart" in {
 
     driver.findElementByCssSelector("a.desktop-cart").click()
   }
 
-// "user" should "be able to checkout" in {
-//
-//    driver.findElementByCssSelector("a.desktop-cart").click()
-//  }
+  "user" should "be able to checkout" in {
+
+    //webdriverwait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div.place-order.b-white button.btn.primary-btn.btn-continue.m-button.clickable")))
+
+    driver.findElementByCssSelector("div.order-total.footer div.place-order.b-white button.btn.primary-btn.btn-continue.m-button.clickable ").click()
+
+    driver.findElementByCssSelector("input.pincode").sendKeys("110096")
+
+//    val dropDown = driver.findElementByCssSelector("input.locality")
+////    val mouseHover = new Actions(driver)
+////    mouseHover.moveToElement(dropDown)
+////    mouseHover.click().perform()
+//    new Actions(driver).moveToElement(dropDown).click().perform()
+    driver.findElementByCssSelector("input.locality").click()
+    webdriverwait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div.suggestions div.bd button")))
+    driver.findElementByCssSelector("div.suggestions div.bd button").click()
+
+    driver.findElementByCssSelector("input.name").sendKeys("Akhil Vijayan")
+
+    driver.findElementByCssSelector("textarea.address").sendKeys("Mayur Vihar Phase 3")
+
+    driver.findElementByCssSelector("input.mobile").sendKeys("8899566432")
+
+    driver.findElementByCssSelector("button.green-button.submit.clickable").click()
+
+    webdriverwait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button.btn.primary-btn.btn-continue.green-button.clickable")))
+    driver.findElementByCssSelector("button.btn.primary-btn.btn-continue.green-button.clickable").click()
+  }
 
 }

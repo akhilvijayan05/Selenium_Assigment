@@ -7,7 +7,7 @@
 		revision="1.0"
 		conf="test"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20170328182712"/>
+		date="20170329001503"/>
 	<dependencies>
 		<module organisation="org.seleniumhq.selenium" name="selenium-server">
 			<revision name="3.0.1" status="release" pubdate="20161018230414" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.seleniumhq.org/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="48">
