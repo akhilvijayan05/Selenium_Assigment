@@ -1,0 +1,13 @@
+[0m[[0minfo[0m] [0m[32mMyntraTest:[0m[0m
+[0m[[0minfo[0m] [0m[32mA user[0m[0m
+[0m[[0minfo[0m] [0m[32m- should visit on amazon.in[0m[0m
+[0m[[0minfo[0m] [0m[32muser[0m[0m
+[0m[[0minfo[0m] [0m[32m- should logged in[0m[0m
+[0m[[0minfo[0m] [0m[32muser[0m[0m
+[0m[[0minfo[0m] [0m[32m- should select a T-shirt category[0m[0m
+[0m[[0minfo[0m] [0m[32muser[0m[0m
+[0m[[0minfo[0m] [0m[32m- should select a T-shirt[0m[0m
+[0m[[0minfo[0m] [0m[32muser[0m[0m
+[0m[[0minfo[0m] [0m[32m- should be able to choose the desired size of the selected t-shirt and then add it to the cart[0m[0m
+[0m[[0minfo[0m] [0m[32muser[0m[0m
+[0m[[0minfo[0m] [0m[32m- should be able to checkout[0m[0m
