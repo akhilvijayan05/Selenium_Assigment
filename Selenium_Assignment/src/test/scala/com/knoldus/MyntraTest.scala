@@ -107,19 +107,13 @@ class MyntraTest extends FlatSpec with Myntra {
 
   "user" should "be able to checkout" in {
 
-    //webdriverwait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div.place-order.b-white button.btn.primary-btn.btn-continue.m-button.clickable")))
-
     driver.findElementByCssSelector("div.order-total.footer div.place-order.b-white button.btn.primary-btn.btn-continue.m-button.clickable ").click()
 
     driver.findElementByCssSelector("input.pincode").sendKeys("110096")
 
-//    val dropDown = driver.findElementByCssSelector("input.locality")
-////    val mouseHover = new Actions(driver)
-////    mouseHover.moveToElement(dropDown)
-////    mouseHover.click().perform()
-//    new Actions(driver).moveToElement(dropDown).click().perform()
-    driver.findElementByCssSelector("input.locality").click()
-    webdriverwait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div.suggestions div.bd button")))
+    driver.findElementById("locality").click()
+    Thread.sleep(1000)
+    driver.findElementById("locality").click()
     driver.findElementByCssSelector("div.suggestions div.bd button").click()
 
     driver.findElementByCssSelector("input.name").sendKeys("Akhil Vijayan")
@@ -130,8 +124,11 @@ class MyntraTest extends FlatSpec with Myntra {
 
     driver.findElementByCssSelector("button.green-button.submit.clickable").click()
 
-    webdriverwait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button.btn.primary-btn.btn-continue.green-button.clickable")))
+    //webdriverwait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button.btn.primary-btn.btn-continue.green-button.clickable")))
+    Thread.sleep(2000)
     driver.findElementByCssSelector("button.btn.primary-btn.btn-continue.green-button.clickable").click()
+    Thread.sleep(3000)
+    driver.close()
   }
 
 }
